@@ -1,0 +1,145 @@
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+font-family: Arial, Helvetica, sans-serif;
+text-transform: capitalize;
+text-decoration: none;
+}
+
+body{
+    min-height: 100vh;
+    background: url(./img/paisagem.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+    padding: 0px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+header .logo{
+    font-size: 48px;
+    display: inline-block;
+    background: linear-gradient(to right, #172601 0%, #172601 50%, #fff 50%, #fff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+header .navbar ul{
+    list-style: none;
+}
+
+header .navbar ul li{
+    position: relative;
+    float: left;
+}
+
+header .navbar ul li a{
+    font-size: 20px;
+    display: block;
+    padding: 20px;
+    color: rgb(120, 120, 120)
+}
+
+header .navbar ul li a:hover{
+    color: #fff;
+    background: #172601;
+}
+
+header .navbar ul li ul{
+    position: absolute;
+    width: 200px;
+    left: 0;
+    background: #C5D9CC;
+    display: none;
+}
+
+header .navbar ul li ul li{
+    width: 100%;
+    border-top: 1px solid rgba(0, 0, 0, .1);
+}
+
+header .navbar ul li ul li ul{
+    left: 200px;
+    top: 0;
+}
+
+header .navbar ul li:focus-within > ul,
+header .navbar ul li:hover > ul{
+    display: initial;
+}
+
+#menu-bar{
+    display: none;
+}
+
+header label{
+    font-size: 20px;
+    cursor: pointer;
+    color:#172601;
+    display: none;
+    border: 2px solid #172601;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+@media(max-width: 991px) {
+    header{
+        padding: 20px;
+    }
+
+    header label{
+        display: initial;
+    }
+
+    header .navbar{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 100%;
+        background: #C5D9CC;
+        border-top: 1px solid rgba(0, 0, 0, .1);
+        display: none;
+    }
+    header .navbar ul li{
+        width: 100%;
+    }
+    header .navbar ul li ul{
+        position: relative;
+        width: 100%;
+    }
+    header .navbar ul li ul li{
+        background: #C5D9CC;
+    }
+    header .navbar ul li ul li ul{
+        width: 100%;
+        left: 0;
+    }
+
+    #menu-bar:checked ~ .navbar{
+        display: initial;
+    }
+}
+
+.half-colored-letter {
+    font-size: 72px; /* Tamanho da letra */
+    display: inline-block;
+    background: linear-gradient(to right, red 0%, red 50%, blue 50%, blue 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
